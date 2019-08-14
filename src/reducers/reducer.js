@@ -35,7 +35,9 @@ export const carInfoReducer = (state = initialState, action) => {
         additionalPrice: state.additionalPrice + action.payload.price
       };
     case REMOVE:
-      let newArray = state.car.features.filter(feature.name !== action.payload);
+      let newArray = state.car.features.filter(
+        feature => feature.name !== action.payload
+      );
       let index = state.store.findIndex(
         element => element.name === action.payload
       );

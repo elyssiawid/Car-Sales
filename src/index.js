@@ -8,7 +8,7 @@ import "./styles.scss";
 //redux
 import { Provider } from "react-redux";
 import { createStore } from "redux";
-import { carInfoReducer } from "./store/reducer";
+import { carInfoReducer } from "./reducers/reducer";
 
 const store = createStore(carInfoReducer);
 
