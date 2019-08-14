@@ -64,4 +64,6 @@ const mapStateToProps = ({ additionalPrice, car, store }) => {
     store: store
   };
 };
+
+export default connect(mapStateToProps, {addCar, remove})(App)
 export default App;
