@@ -1,9 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
 
-import 'bulma/css/bulma.css';
-import './styles.scss';
+import "bulma/css/bulma.css";
+import "./styles.scss";
 
-const rootElement = document.getElementById('root');
-ReactDOM.render(<App />, rootElement);
+//redux
+import { Provider } from "react-redux";
+import { createStore } from "redux";
+import { carInfoReducer } from "./reducers/reducer";
+
+const store = createStore(carInfoReducer);
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  rootElement
+);
